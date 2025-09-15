@@ -1,5 +1,6 @@
-Basic Job Script Template:
 
+**Basic Job Script Template:**
+```bash
 #!/bin/bash
 #SBATCH --job-name=my_job              # Job name
 #SBATCH --output=output_%j.txt         # Output file (%j = job ID)
@@ -16,8 +17,10 @@ conda activate myenv
 
 # Execute your program
 python my_script.py
-GPU Job Script:
+```
 
+**GPU Job Script:**
+```bash
 #!/bin/bash
 #SBATCH --job-name=gpu_job
 #SBATCH --partition=gpu
@@ -32,3 +35,4 @@ conda activate myenv
 
 # Run GPU-enabled program
 python gpu_script.py
+```
