@@ -1,5 +1,5 @@
 # 🖥️ How To Use SLURM (Connect)
-
+#  Remote Access to the Login Node
 
 
 Slurm (Simple Linux Utility for Resource Management) is a workload manager designed for clusters. It efficiently schedules jobs and manages resources, ensuring fair and effective utilization of computational power. Here's a brief guide to help you get started with Slurm.
@@ -8,9 +8,9 @@ To use SLURM, you will need to connect to the login node of your high-performanc
 
 ---
 
-## 🔗 Remote Access to the Login Node
 
-### A. Terminal/Command Line
+
+##  Terminal/Command Line
 
 For all OS systems, the command used to connect to the workstation via terminal is the same:
 
@@ -24,7 +24,7 @@ ssh username@LoginNodeIP
 
 ---
 
-### B. Visual Studio Code (Optional)
+##  Visual Studio Code (Optional)
 
 For all OS systems, if you have VS Code installed, then follow these steps to connect to your workstation via VS Code. 
 
