@@ -228,7 +228,7 @@ scontrol release 115
 
 Commands for moving files between your local machine and the cluster.
 
-### 📤 scp - Secure Copy Protocol
+###  scp - Secure Copy Protocol
 Transfer files and directories securely:
 
 #### **Upload to Cluster**
@@ -258,28 +258,8 @@ scp -r username@10.22.188.36:~/output/ ./local-results/
 scp mohammed_slurm@10.22.188.36:~/data/processed_data.csv ./
 ```
 
-#### **Platform-Specific Examples**
 
-**macOS/Linux:**
-```bash
-# Create local directory first
-mkdir ~/cluster-data
 
-# Upload project
-scp -r ~/Projects/ml-project mohammed_slurm@10.22.188.36:~/data/
-
-# Download results
-scp -r mohammed_slurm@10.22.188.36:~/results/ ~/cluster-data/
-```
-
-**Windows (using PuTTY's pscp):**
-```cmd
-# Upload (Windows CMD)
-pscp -r C:\Projects\ml-project mohammed_slurm@10.22.188.36:/home/mohammed_slurm/data/
-
-# Download (Windows CMD)
-pscp -r mohammed_slurm@10.22.188.36:/home/mohammed_slurm/results/ C:\cluster-results\
-```
 
 ### 📋 sftp - Secure File Transfer Protocol
 Interactive file transfer with more features:
