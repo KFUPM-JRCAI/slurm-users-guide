@@ -484,13 +484,16 @@ squeue -u $USER -o "%.18i %.9P %.8j %.8u %.2t %.10M %.6D %R"
 
 ## 📋 Essential SLURM Workflow
 
-1. **Check cluster status**: `sinfo`
-2. **Write job script** with proper SBATCH directives
-3. **Submit job**: `sbatch script.slurm`
-4. **Monitor job**: `squeue -u $USER`
-5. **Check results**: `scontrol show job JOBID`
-6. **Transfer results**: `scp user@host:~/results/ ./`
-
+```mermaid
+graph TD
+    A[Write Job Script] --> B[Submit with sbatch]
+    B --> C[Job Queued - Status: PD]
+    C --> D[Resources Available?]
+    D -->|No| C
+    D -->|Yes| E[Job Running - Status: R]
+    E --> F[Job Complete]
+    F --> G[Check Results]
+```
 ---
 
 *For technical support, contact the JRCAI system administrators or refer to your cluster-specific documentation.*
