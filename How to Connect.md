@@ -46,7 +46,8 @@ Once you run VS Code, follow these steps to connect to your workstation:
 #### Step 3: Add New SSH Host
 
 
-![Add New SSH Host](https://i.imgur.com/LzO2U9W.png)
+![Add New SSH Host](https://i.imgur.com/5BfceHp.png)
+
 
 
 #### Step 4: Enter Connection Details `username@workstation_ip_address`
@@ -65,7 +66,7 @@ Once you run VS Code, follow these steps to connect to your workstation:
 #### Step 6: Connect to Host
 
 
-![Connect to Host Menu](https://i.imgur.com/5BfceHp.png)
+![Connect to Host Menu](https://i.imgur.com/kQ2BYjJ.png)
 
 
 #### Step 7: Select Your Host
