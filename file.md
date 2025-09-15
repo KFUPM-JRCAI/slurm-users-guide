@@ -1,4 +1,3 @@
-[slurm_guide (2).md](https://github.com/user-attachments/files/22330779/slurm_guide.2.md)
 # 🖥️ SLURM Guide - KFUPM JRCAI
 
 **Simple Linux Utility for Resource Management**
@@ -10,15 +9,14 @@ Slurm is a workload manager designed for clusters. It efficiently schedules jobs
 
 ---
 
-<details>
-<summary>📋 Table of Contents</summary>
+📋 Table of Contents
 
 - [Monitoring SLURM](#monitoring-slurm)
 - [Utilizing SLURM](#utilizing-slurm)
 - [Transferring Data](#transferring-data)
 - [Account Commands](#account-commands)
 
-</details>
+
 
 ---
 
@@ -29,7 +27,7 @@ Slurm is a workload manager designed for clusters. It efficiently schedules jobs
 
 Commands for checking cluster status, job information, and resource availability.
 
-### 📊 sinfo - Cluster Information
+###  sinfo - Cluster Information
 View cluster node information and partition status:
 
 ```bash
@@ -53,7 +51,7 @@ debug*       up   infinite      2   idle node[01-02]
 gpu          up   infinite      1   idle gpu01
 ```
 
-### 🔧 scontrol - Detailed Control Information
+###  scontrol - Detailed Control Information
 Show detailed parameters of jobs, nodes, and partitions:
 
 ```bash
@@ -85,7 +83,7 @@ JobId=115 JobName=my_job
    StdErr=/home/mohammed_slurm/error_115.txt
 ```
 
-### 📈 squeue - Job Queue Status
+###  squeue - Job Queue Status
 Query the status of jobs in the queue:
 
 ```bash
@@ -127,11 +125,11 @@ JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 <details>
 <summary>⚡ Utilizing SLURM</summary>
 
-## Utilizing SLURM
+## Submitting Jobs SLURM
 
 Commands for submitting and running jobs on the cluster.
 
-### 📤 sbatch - Submit Batch Jobs
+###  sbatch - Submit Batch Jobs
 Submit job scripts to the SLURM scheduler:
 
 ```bash
