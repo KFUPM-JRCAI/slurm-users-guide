@@ -349,12 +349,7 @@ Commands for managing your SLURM cluster account and authentication.
 # Change your SLURM password
 spasswd
 ```
-###  Account Management Tips
 
-#### **Password Best Practices:**
-- Use `spasswd` immediately after receiving account credentials
-- Choose a strong password (8+ characters, mixed case, numbers, symbols)
-- Never share your SLURM credentials
 
 
 ###  Account Information Commands
@@ -400,14 +395,6 @@ watch sstat -j 12345 --format=AveCPU,AveRSS,MaxRSS
 # View cluster usage
 sshare -u $USER
 ```
-
-
-
-
-
-
-
-
 
 </details>
 
