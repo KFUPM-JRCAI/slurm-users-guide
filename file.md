@@ -155,7 +155,7 @@ sbatch --array=1-10 array_job.slurm
 ```
 
 
-### 🔧 salloc - Interactive Resource Allocation
+###  salloc - Interactive Resource Allocation
 Allocate compute resources for interactive use:
 
 ```bash
@@ -181,7 +181,7 @@ $ exit  # Release the allocation
 salloc: Relinquishing job allocation 109
 ```
 
-### 🏃 srun - Execute Commands
+###  srun - Execute Commands
 Launch applications on allocated compute resources:
 
 ```bash
