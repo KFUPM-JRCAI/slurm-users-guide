@@ -1,5 +1,5 @@
 # 🖥️ SLURM Guide
-
+![Screenshot](https://i.imgur.com/ZWITKEi.png)
 A simple guide to using SLURM (Simple Linux Utility for Resource Management) on KFUPM clusters.
 
 ---
