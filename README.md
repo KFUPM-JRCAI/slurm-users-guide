@@ -13,21 +13,36 @@ Learn how to connect to the SLURM cluster using:
 
 ### 2. ⚡ [How to Use SLURM](How_to_Use.md)
 Complete guide covering:
-- Monitoring commands (`sinfo`, `squeue`, `scontrol`)
-- Job submission (`sbatch`, `srun`, `salloc`)
-- Data transfer (`scp`, `sftp`)
-- Account management (`spasswd`)
-
+- Monitoring commands 
+- Job submission 
+- Data transfer 
+- Account management 
 ---
 
-## 🚀 Quick Start
+## 📋 Basic SLURM Workflow
 
-1. **Connect to cluster**: [Follow connection guide](How_to_Connect.md)
-2. **Change password**: `spasswd`
-3. **Check cluster status**: `sinfo`
-4. **Submit a job**: `sbatch my_script.sh`
-5. **Monitor jobs**: `squeue -u $USER`
-
+```mermaid
+graph TD
+    A[Write Job Script] --> B[Submit with sbatch]
+    B --> C[Job Queued - Status: PD]
+    C --> D[Resources Available?]
+    D -->|No| C
+    D -->|Yes| E[Job Running - Status: R]
+    E --> F[Job Complete]
+    F --> G[Check Results]
+```
 ---
 
-*Need help? Start with [How to Connect](How_to_Connect.md), then move to [How to Use SLURM](How_to_Use.md).*
+###  Getting Help
+
+#### **Contact Information:**
+- **System Administrator**: Contact JRCAI support team
+- **Technical Issues**: mohammed.sinan@kfupm.edu.sa
+- **Account Problems**: Submit ticket through proper channels
+
+*Last Updated: 16/9/2025*  
+*By: Mohammed AlSinan (mohammed.sinan@kfupm.edu.sa)*
+
+**Login Node**: (check your email/registration details)
+
+
