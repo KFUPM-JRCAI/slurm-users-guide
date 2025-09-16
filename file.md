@@ -199,19 +199,6 @@ srun python interactive_script.py
 srun jupyter notebook --ip 10.22.154.19 --port 8888
 ```
 
-**Interactive Jupyter Setup** (Debug/Testing Only):
-```bash
-# Step 1: Allocate resources
-salloc --cpus-per-task=10 --mem=20G --gres=gpu:1
-
-# Step 2: Start Jupyter
-srun jupyter notebook --ip 10.22.xx.xx --port 8888
-```
-
-**Node IP Addresses:**
-- **jrcai09**: 10.22.154.19
-- **server02**: 10.22.154.101  
-- **jrcai06**: 10.22.154.16
 
 **Job Control Commands:**
 ```bash
@@ -491,7 +478,7 @@ graph TD
 ```
 ---
 
-*For technical support, contact the JRCAI system administrators or refer to your cluster-specific documentation.*
+*For technical support, contact the JRCAI system administrators.*
 *Last Updated: 16/9/2025*  
 *By: Mohammed AlSinan (mohammed.sinan@kfupm.edu.sa)*
 
