@@ -73,7 +73,7 @@ scontrol show job 115
 scontrol show node
 
 # Show partition details
-scontrol show partition debug
+scontrol show partition XXXXX
 
 # Show all job information
 scontrol show jobs
@@ -149,9 +149,6 @@ sbatch my_script.slurm
 
 # Submit with additional options
 sbatch --partition=gpu --gres=gpu:1 my_script.slurm
-
-# Submit job array
-sbatch --array=1-10 array_job.slurm
 ```
 
 
@@ -166,7 +163,7 @@ salloc
 salloc --cpus-per-task=10 --mem=20G --gres=gpu:1
 
 # Interactive session with time limit
-salloc --time=02:00:00 --partition=debug
+salloc --time=02:00:00 --partition=XXXXX
 
 # Request specific nodes
 salloc --nodelist=node01,node02
@@ -195,8 +192,7 @@ srun --cpus-per-task=4 --mem=8G python my_script.py
 salloc --cpus-per-task=4 --mem=8G
 srun python interactive_script.py
 
-# Run Jupyter notebook (for debugging only!)
-srun jupyter notebook --ip 10.22.154.19 --port 8888
+
 ```
 
 
