@@ -156,7 +156,7 @@ sbatch my_script.slurm
 # Submit with additional options
 sbatch --partition=gpu --gres=gpu:1 my_script.slurm
 ```
-- [Connection Guide](How_to_Connect.md) 
+- [Script Sample](Job_Script_Templates.md) 
 
 ###  salloc - Interactive Resource Allocation
 Allocate compute resources for interactive use:
@@ -304,26 +304,6 @@ sftp> ls -la
 sftp> chmod 755 script.sh
 ```
 
-### 📝 Tips for Data Transfer
-
-#### **Before Transferring:**
-```bash
-# Create directories on cluster
-ssh username@10.22.188.36
-mkdir ~/data ~/results ~/scripts
-exit
-```
-
-#### **Efficient Transfer:**
-```bash
-# Compress before transfer (large datasets)
-tar -czf project.tar.gz project/
-scp project.tar.gz username@10.22.188.36:~/
-ssh username@10.22.188.36 "cd ~ && tar -xzf project.tar.gz"
-
-# Transfer with progress
-scp -v file.txt username@10.22.188.36:~/  # Verbose mode
-```
 
 #### **Common Issues:**
 - **Permission denied**: Check your username and password
