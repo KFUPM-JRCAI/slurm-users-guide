@@ -4,6 +4,27 @@ A simple guide to using SLURM (Simple Linux Utility for Resource Management) on 
 
 ---
 
+##  Current Cluster Setup
+### 📊 Partition Details
+| Partition | Purpose | Time Limit | Nodes | GPUs |
+|-----------|---------|------------|-------|------|
+| **Normal*** | Large Models| 24 hours | server02 | 6x A100 |
+| **RTX3090** | GPU computing | 24 hours | jrcai01-02 | 2x (2xRTX 3090) |
+| **LoginNode** | Access only | - | jrcai23 | Login access |
+
+*\* Default partition*
+
+
+
+### 👥 Group Management
+- **Advisor Groups**: Each advisor has a group with their students
+- **Shared Storage**: Groups share disk space within their allocation
+- **Job Limits**: 
+  - **Normal Partition**: 1 job limit per group (default)
+  - **RTX3090 Partition**: Groups can submit 1 additional GPU job by specifying this partition
+
+
+
 ## 📖 Documentation
 
 ###  🔗 [How to Connect](How_to_Connect.md)
@@ -31,8 +52,8 @@ graph TD
     E --> F[Job Complete]
     F --> G[Check Results]
 ```
----
 
+---
 ###  Getting Help
 
 #### **Contact Information:**
