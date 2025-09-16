@@ -156,7 +156,7 @@ sbatch my_script.slurm
 # Submit with additional options
 sbatch --partition=gpu --gres=gpu:1 my_script.slurm
 ```
-
+- [Connection Guide](How_to_Connect.md) 
 
 ###  salloc - Interactive Resource Allocation
 Allocate compute resources for interactive use:
