@@ -7,9 +7,8 @@
 
 Slurm is a workload manager designed for clusters. It efficiently schedules jobs and manages resources, ensuring fair and effective utilization of computational power.
 
----
 
-📋 Table of Contents
+## 📋 Table of Contents
 
 - [Monitoring SLURM](#monitoring-slurm)
 - [Utilizing SLURM](#utilizing-slurm)
