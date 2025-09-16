@@ -9,7 +9,7 @@
 #SBATCH --ntasks=1                    # Number of tasks
 #SBATCH --cpus-per-task=4             # CPU cores per task
 #SBATCH --mem=8G                      # Total memory limit
-#SBATCH --partition=debug             # Partition (queue) name
+#SBATCH --partition=XXXX            # Partition (queue) name
 
 # Activate environment
 source .bashrc
@@ -23,7 +23,7 @@ python my_script.py
 ```bash
 #!/bin/bash
 #SBATCH --job-name=gpu_job
-#SBATCH --partition=gpu
+#SBATCH --partition=XXXXX
 #SBATCH --gres=gpu:1                  # Request 1 GPU
 #SBATCH --time=02:00:00
 #SBATCH --mem=32G
