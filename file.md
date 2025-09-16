@@ -13,6 +13,21 @@ Slurm is a workload manager designed for clusters. It efficiently schedules jobs
 - [Account Commands](#account-commands)
 
 
+###  Quick Reference Card
+
+| **Category** | **Command** | **Purpose** |
+|--------------|-------------|-------------|
+| **Monitoring** | `sinfo` | Cluster status |
+| | `scontrol show job ID` | Job details |
+| | `squeue -u $USER` | Your jobs |
+| **Utilizing** | `sbatch script.sh` | Submit batch job |
+| | `salloc --cpus-per-task=4` | Interactive allocation |
+| | `srun python script.py` | Execute command |
+| **Transferring** | `scp file.txt user@host:~/` | Upload file |
+| | `sftp user@host` | Interactive transfer |
+| **Account** | `spasswd` | Change password |
+| | `sacct` | Job history |
+
 
 ---
 
@@ -459,22 +474,6 @@ squeue -u $USER -o "%.18i %.9P %.8j %.8u %.2t %.10M %.6D %R"
 
 </details>
 
----
-
-## 🎯 Quick Reference Card
-
-| **Category** | **Command** | **Purpose** |
-|--------------|-------------|-------------|
-| **Monitoring** | `sinfo` | Cluster status |
-| | `scontrol show job ID` | Job details |
-| | `squeue -u $USER` | Your jobs |
-| **Utilizing** | `sbatch script.sh` | Submit batch job |
-| | `salloc --cpus-per-task=4` | Interactive allocation |
-| | `srun python script.py` | Execute command |
-| **Transferring** | `scp file.txt user@host:~/` | Upload file |
-| | `sftp user@host` | Interactive transfer |
-| **Account** | `spasswd` | Change password |
-| | `sacct` | Job history |
 
 ---
 
