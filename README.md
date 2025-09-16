@@ -6,12 +6,12 @@ A simple guide to using SLURM (Simple Linux Utility for Resource Management) on 
 
 ## 📖 Documentation
 
-### 1. 🔗 [How to Connect](How_to_Connect.md)
+###  🔗 [How to Connect](How_to_Connect.md)
 Learn how to connect to the SLURM cluster using:
 - SSH Terminal
 - Visual Studio Code
 
-### 2. ⚡ [How to Use SLURM](How_to_Use.md)
+###  ⚡ [How to Use SLURM](How_to_Use.md)
 Complete guide covering:
 - Monitoring commands 
 - Job submission 
