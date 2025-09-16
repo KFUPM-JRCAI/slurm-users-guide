@@ -434,7 +434,8 @@ graph TD
 - **System Administrator**: Contact JRCAI support team
 - **Technical Issues**: mohammed.sinan@kfupm.edu.sa
 - **Account Problems**: Submit ticket through proper channels
+
 *Last Updated: 16/9/2025*  
 *By: Mohammed AlSinan (mohammed.sinan@kfupm.edu.sa)*
 
-**Login Node**: 10.22.188.36 (may vary - check your registration details)
+**Login Node**: (check your email/registration details)
