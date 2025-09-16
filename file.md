@@ -8,7 +8,7 @@ Slurm is a workload manager designed for clusters. It efficiently schedules jobs
 ## 📋 Table of Contents
 
 - [Monitoring SLURM](#monitoring-slurm)
-- [Utilizing SLURM](#utilizing-slurm)
+- [Utilizing SLURM](#submitting-jobs)
 - [Transferring Data](#transferring-data)
 - [Account Commands](#account-commands)
 
@@ -136,7 +136,7 @@ JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 <details>
 <summary>⚡ Utilizing SLURM</summary>
 
-## Submitting Jobs SLURM
+## Submitting Jobs 
 
 Commands for submitting and running jobs on the cluster.
 
@@ -492,5 +492,7 @@ graph TD
 ---
 
 *For technical support, contact the JRCAI system administrators or refer to your cluster-specific documentation.*
+*Last Updated: 16/9/2025*  
+*By: Mohammed AlSinan (mohammed.sinan@kfupm.edu.sa)*
 
 **Login Node**: 10.22.188.36 (may vary - check your registration details)
