@@ -347,13 +347,13 @@ scp -v file.txt username@10.22.188.36:~/  # Verbose mode
 ---
 
 <details>
-<summary>👤 Account Commands</summary>
+<summary> Account Commands</summary>
 
 ## Account Commands
 
 Commands for managing your SLURM cluster account and authentication.
 
-### 🔐 spasswd - Change SLURM Password
+###  spasswd - Change SLURM Password
 **Important**: The standard `passwd` command does not work for SLURM users. Always use `spasswd`:
 
 ```bash
@@ -373,7 +373,7 @@ Enter current password:
 (base) mohammed_slurm@jrcai01:~$
 ```
 
-### 📊 Account Information Commands
+###  Account Information Commands
 
 #### **View Your Account Details**
 ```bash
@@ -417,7 +417,7 @@ watch sstat -j 115 --format=AveCPU,AveRSS,MaxRSS
 sshare -u $USER
 ```
 
-### 🔧 Account Management Tips
+###  Account Management Tips
 
 #### **Password Best Practices:**
 - Use `spasswd` immediately after receiving account credentials
@@ -450,7 +450,7 @@ sacctmgr show associations user=$USER
 sacctmgr show account where user=$USER
 ```
 
-### 📞 Getting Help
+###  Getting Help
 
 #### **Contact Information:**
 - **System Administrator**: Contact JRCAI support team
