@@ -77,6 +77,12 @@ scontrol show partition XXXXX
 
 # Show all job information
 scontrol show jobs
+
+# View all available partitions
+scontrol show partitions
+
+# Check node specifications
+scontrol show nodes
 ```
 
 **Example Job Details:**
@@ -111,7 +117,7 @@ squeue -j 115
 squeue --name=my_job
 
 # Detailed format
-squeue -o "%.18i %.9P %.8j %.8u %.2t %.10M %.6D %R"
+squeue -o "%.10i %.20j %.10P %.10a %.8C %.30b %.10M %.10m %.10R"
 ```
 
 **Job States:**
@@ -343,18 +349,13 @@ Commands for managing your SLURM cluster account and authentication.
 # Change your SLURM password
 spasswd
 ```
+###  Account Management Tips
 
-**Interactive Process:**
-```
-(base) mohammed_slurm@jrcai01:~$ spasswd
-Old SLURM Password Change dep.
-Changing password for mohammedsinan
-Enter new password:
-Confirm new password:
-Enter current password:
-✓ Password changed successfully!
-(base) mohammed_slurm@jrcai01:~$
-```
+#### **Password Best Practices:**
+- Use `spasswd` immediately after receiving account credentials
+- Choose a strong password (8+ characters, mixed case, numbers, symbols)
+- Never share your SLURM credentials
+
 
 ###  Account Information Commands
 
@@ -379,81 +380,34 @@ sreport user top start=2025-01-01 end=now
 sacct
 
 # View specific job details
-sacct -j 115 --format=JobID,JobName,State,ExitCode,Start,End
+sacct -j 12345 --format=JobID,JobName,State,ExitCode,Start,End
 
 # View jobs from specific date
 sacct --starttime=2025-10-01
 
 # View detailed resource usage
-sacct -j 115 --format=JobID,MaxRSS,MaxVMSize,AveCPU,AveRSS
+sacct -j 12345 --format=JobID,MaxRSS,MaxVMSize,AveCPU,AveRSS
 ```
 
 #### **Check Resource Usage**
 ```bash
 # Current resource usage
-sstat -j 115 --format=AveCPU,AveRSS,MaxRSS
+sstat -j 12345 --format=AveCPU,AveRSS,MaxRSS
 
 # Monitor running job
-watch sstat -j 115 --format=AveCPU,AveRSS,MaxRSS
+watch sstat -j 12345 --format=AveCPU,AveRSS,MaxRSS
 
 # View cluster usage
 sshare -u $USER
 ```
 
-###  Account Management Tips
 
-#### **Password Best Practices:**
-- Use `spasswd` immediately after receiving account credentials
-- Choose a strong password (8+ characters, mixed case, numbers, symbols)
-- Change password regularly for security
-- Never share your SLURM credentials
 
-#### **Monitoring Your Usage:**
-```bash
-# Create alias for easy checking
-echo "alias myusage='sacct --starttime=\$(date -d \"1 month ago\" +%Y-%m-%d)'" >> ~/.bashrc
-source ~/.bashrc
 
-# Check monthly usage
-myusage
 
-# Check current jobs and usage
-squeue -u $USER && echo "--- Resource Usage ---" && sshare -u $USER
-```
 
-#### **Account Troubleshooting:**
-```bash
-# If locked out, check account status
-sacctmgr show user $USER
 
-# Verify your associations
-sacctmgr show associations user=$USER
 
-# Check if account is active
-sacctmgr show account where user=$USER
-```
-
-###  Getting Help
-
-#### **Contact Information:**
-- **System Administrator**: Contact JRCAI support team
-- **Technical Issues**: mohammed.sinan@kfupm.edu.sa
-- **Account Problems**: Submit ticket through proper channels
-
-#### **Self-Help Commands:**
-```bash
-# Check SLURM version
-sinfo --version
-
-# View all available partitions
-scontrol show partitions
-
-# Check node specifications
-scontrol show nodes
-
-# View your current allocations
-squeue -u $USER -o "%.18i %.9P %.8j %.8u %.2t %.10M %.6D %R"
-```
 
 </details>
 
@@ -474,7 +428,12 @@ graph TD
 ```
 ---
 
-*For technical support, contact the JRCAI system administrators.*
+###  Getting Help
+
+#### **Contact Information:**
+- **System Administrator**: Contact JRCAI support team
+- **Technical Issues**: mohammed.sinan@kfupm.edu.sa
+- **Account Problems**: Submit ticket through proper channels
 *Last Updated: 16/9/2025*  
 *By: Mohammed AlSinan (mohammed.sinan@kfupm.edu.sa)*
 
