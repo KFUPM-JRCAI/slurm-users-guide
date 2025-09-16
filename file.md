@@ -2,9 +2,6 @@
 
 **Simple Linux Utility for Resource Management**
 
-*Last Updated: October 8, 2025*  
-*By: Mohammed AlSinan (mohammed.sinan@kfupm.edu.sa)*
-
 Slurm is a workload manager designed for clusters. It efficiently schedules jobs and manages resources, ensuring fair and effective utilization of computational power.
 
 
