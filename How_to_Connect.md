@@ -90,4 +90,4 @@ Once you run VS Code, follow these steps to connect to your workstation:
 
 
 
-*Ready to start using SLURM? Check out our complete [SLURM Commands Guide](README.md) for job submission and management!*
+
