@@ -316,7 +316,7 @@ sftp> chmod 755 script.sh
 ---
 
 <details>
-<summary> Account Commands</summary>
+<summary>👨🏻‍💻 Account Commands</summary>
 
 ## Account Commands
 
