@@ -372,8 +372,6 @@ sstat -j 12345 --format=AveCPU,AveRSS,MaxRSS
 # Monitor running job
 watch sstat -j 12345 --format=AveCPU,AveRSS,MaxRSS
 
-# View cluster usage
-sshare -u $USER
 ```
 
 </details>
