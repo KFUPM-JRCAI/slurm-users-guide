@@ -18,9 +18,9 @@ A simple guide to using SLURM (Simple Linux Utility for Resource Management) on 
 
 ### 👥 Group Management
 - **Advisor Groups**: Each advisor has a group with their students
-- **Shared Storage**: Groups share disk space within their allocation
+- **Shared Storage**: Groups are hard-limited to 1 TB of shared disk space.
 - **Job Limits**: 
-  - **Normal Partition**: 1 job limit per group (default)
+  - **Normal Partition (default)**: 1 job limit per group
   - **RTX3090 Partition**: Groups can submit 1 additional GPU job by specifying this partition
 
 
