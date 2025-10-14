@@ -234,28 +234,28 @@ Transfer files and directories securely:
 #### **Upload to Cluster**
 ```bash
 # Upload a single file
-scp file.txt username@10.22.188.36:~/
+scp file.txt username@LoginNodeIP:~/
 
 # Upload a directory
-scp -r /local/directory username@10.22.188.36:~/destination/
+scp -r /local/directory username@LoginNodeIP:~/destination/
 
 # Upload with specific destination
-scp -r /Downloads/my-project mohammed_slurm@10.22.188.36:~/data/
+scp -r /Downloads/my-project mohammed_slurm@LoginNodeIP:~/data/
 
 # Upload to specific path
-scp dataset.csv mohammed_slurm@10.22.188.36:/home/mohammed_slurm/projects/
+scp dataset.csv mohammed_slurm@1LoginNodeIP:/home/mohammed_slurm/projects/
 ```
 
 #### **Download from Cluster**
 ```bash
 # Download a file
-scp username@10.22.188.36:~/results.txt ./
+scp username@LoginNodeIP:~/results.txt ./
 
 # Download a directory
-scp -r username@10.22.188.36:~/output/ ./local-results/
+scp -r username@LoginNodeIP:~/output/ ./local-results/
 
 # Download with specific source
-scp mohammed_slurm@10.22.188.36:~/data/processed_data.csv ./
+scp mohammed_slurm@LoginNodeIP:~/data/processed_data.csv ./
 ```
 
 
