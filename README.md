@@ -17,14 +17,13 @@ A simple guide to using SLURM (Simple Linux Utility for Resource Management) on 
 
 ### Available Nodes and Their Resources
 
-| Node | GPUs | GPU Type | CPUs | Memory |
-|------|------|----------|------|--------|
-| server02 | 6 | A100| 255 | ~2TB |
-| jrcai01 | 2 | RTX 3090 | 48 | ~64GB |
-| jrcai02 | 2 | RTX 3090 | 48 | ~64GB |
-| jrcai08 | 3 | RTX 3090 | 64 | ~256GB |
-| jrcai18 | 2 | A6000 | 32 | ~256GB |
-
+| Node | GPUs | GPU Type | VRAM | CPUs | Memory |
+|------|------|----------|------|------|--------|
+| server02 | 6 | A100 | 80GB | 255 | ~2TB |
+| jrcai01 | 2 | RTX 3090 | 24GB | 48 | ~64GB |
+| jrcai02 | 2 | RTX 3090 | 24GB | 48 | ~64GB |
+| jrcai08 | 3 | RTX 3090 | 24GB | 64 | ~256GB |
+| jrcai18 | 2 | A6000 | 48GB | 32 | ~256GB |
 
 ### 👥 Group Management
 - **Advisor Groups**: Each advisor has a group with their students
