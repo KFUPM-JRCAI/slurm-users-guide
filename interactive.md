@@ -14,9 +14,12 @@ The `interactive` partition is designed for interactive work sessions where you 
 - **GPU Limit:** Maximum of 3 GPUs across all interactive jobs simultaneously
 - **Job Limit:** Up to 5 concurrent jobs per group/account
 
-### Session Timeout
-If your session is killed after 1 hour, you've hit the time limit. For longer jobs:
-- Use batch jobs on other partitions (RTX3090, A6000, Normal)
+> [!IMPORTANT]
+> 
+> 
+> Sessions on the interactive partition automatically **terminate after 1 hour.** This partition is designed for development, testing, and debugging only.
+> 
+> **For longer or production jobs**, submit to the appropriate batch partitions:
 
 
 ### Request Specific Resources
@@ -83,4 +86,3 @@ Check the reason in the `NODELIST(REASON)` column:
 
 
 
-**Remember:** The interactive partition is for development, testing, and debugging. For production runs, use the appropriate batch partition (RTX3090, A6000, Normal).
