@@ -9,6 +9,7 @@ Slurm is a workload manager designed for clusters. It efficiently schedules jobs
 
 - [Monitoring SLURM](#monitoring-slurm)
 - [Utilizing SLURM](#submitting-jobs)
+- [Interactive Jobs](#interactive-jobs) 
 - [Transferring Data](#transferring-data)
 - [Account Commands](#account-commands)
 
@@ -223,6 +224,8 @@ scontrol release 115
 
 <details>
 <summary>📖 Interactive Partition Guide</summary>
+
+## Interactive Jobs 
 
 #### Partition Details & Limits
 
