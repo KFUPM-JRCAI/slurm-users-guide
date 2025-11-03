@@ -10,7 +10,7 @@ A simple guide to using SLURM (Simple Linux Utility for Resource Management) on 
 |-----------|---------|------------|-------|------|
 | **A100** | Large Models| 24 hours | server02 | 6x A100 |
 | **RTX3090*** | GPU computing | 24 hours | jrcai[01-02,08] | 2x (2xRTX 3090),1x(3xRTX 3090) |
-| **A6000** | GPU computing | 24 hours | jrcai[18] | 1x(2xA6000) 1x(8xA6000) |
+| **A6000** | GPU computing | 24 hours | jrcai[18],server01 | 1x(2xA6000) 1x(8xA6000) |
 | **LoginNode** | Access only | - | jrcai23 | Login access |
 
 *\* Default partition*
@@ -20,16 +20,18 @@ A simple guide to using SLURM (Simple Linux Utility for Resource Management) on 
 | Node | GPUs | GPU Type | VRAM | CPUs | Memory |
 |------|------|----------|------|------|--------|
 | server02 | 6 | A100 | 80GB | 255 | ~2TB |
+| server02 | 8 | A6000 | 49GB | 64 | ~1TB |
+| jrcai18 | 2 | A6000 | 48GB | 32 | ~256GB |
 | jrcai01 | 2 | RTX 3090 | 24GB | 48 | ~64GB |
 | jrcai02 | 2 | RTX 3090 | 24GB | 48 | ~64GB |
 | jrcai08 | 3 | RTX 3090 | 24GB | 64 | ~256GB |
-| jrcai18 | 2 | A6000 | 48GB | 32 | ~256GB |
+
 
 ### 👥 Group Management
 - **Advisor Groups**: Each advisor has a group with their students
 - **Shared Storage**: Groups are hard-limited to 1 TB of shared disk space.
 - **Job Limits**: 
-  - **Normal Partition (default)**: 1 job limit per group
+  - **A100 Partition**: 1 job limit per group
   - **RTX3090 Partition**: Groups can submit 1 additional GPU job by specifying this partition
   - **A6000 Partition**: Groups can submit 1 additional GPU job by specifying this partition
 
