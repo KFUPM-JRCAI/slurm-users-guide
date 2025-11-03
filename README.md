@@ -32,7 +32,7 @@ A simple guide to using SLURM (Simple Linux Utility for Resource Management) on 
 - **Shared Storage**: Groups are hard-limited to 1 TB of shared disk space.
 - **Job Limits**: 
   - **A100 Partition**: 1 job limit per group
-  - **RTX3090 Partition**: Groups can submit 1 additional GPU job by specifying this partition
+  - **RTX3090 Partition (Default)**: Groups can submit 1 additional GPU job by specifying this partition
   - **A6000 Partition**: Groups can submit 1 additional GPU job by specifying this partition
 
 
