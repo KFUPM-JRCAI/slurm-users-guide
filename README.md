@@ -10,7 +10,7 @@ A simple guide to using SLURM (Simple Linux Utility for Resource Management) on 
 |-----------|---------|------------|-------|------|
 | **A100** | Large Models| 24 hours | server02 | 6x A100 |
 | **RTX3090*** | GPU computing | 24 hours | jrcai[01-02,08] | 2x (2xRTX 3090),1x(3xRTX 3090) |
-| **A6000** | GPU computing | 24 hours | jrcai[18] | 1x(2xA6000) |
+| **A6000** | GPU computing | 24 hours | jrcai[18] | 1x(2xA6000) 1x(8xA6000) |
 | **LoginNode** | Access only | - | jrcai23 | Login access |
 
 *\* Default partition*
