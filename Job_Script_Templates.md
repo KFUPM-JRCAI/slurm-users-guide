@@ -25,7 +25,8 @@ python my_script.py
 #SBATCH --job-name=gpu_job
 #SBATCH --partition=XXXXX
 #SBATCH --gres=gpu:1                  # Request 1 GPU
-#SBATCH --time=02:00:00
+#SBATCH --time=02:00:00                #limit your job by time
+#SBATCH --nodelist=NodeName            #push to specific node
 #SBATCH --mem=32G
 #SBATCH --output=gpu_output_%j.txt
 
