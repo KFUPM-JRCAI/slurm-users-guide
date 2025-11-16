@@ -148,59 +148,21 @@ JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 Commands for submitting and running jobs on the cluster.
 
 ###  sbatch - Submit Batch Jobs
-Submit job scripts to the SLURM scheduler:
 
+
+ Basic job submission ( all options can be included inside the script)
 ```bash
-# Basic job submission
 sbatch my_script.slurm
-
-# Submit with additional options
-sbatch --partition=gpu --gres=gpu:1 my_script.slurm
 ```
 - [Script Sample](Job_Script_Templates.md) 
 
-###  salloc - Interactive Resource Allocation
-Allocate compute resources for interactive use:
-
-```bash
-# Basic interactive allocation
-salloc
-
-# Specify resources
-salloc --cpus-per-task=10 --mem=20G --gres=gpu:1
-
-# Interactive session with time limit
-salloc --time=02:00:00 --partition=XXXXX
-
-# Request specific nodes
-salloc --nodelist=node01,node02
+Another way to explicitly specify the options along with the command. Adjust the options as needed
+```
+sbatch --partition=PartitionName --gres=gpu:N --nodelist=NodeName my_script.slurm
 ```
 
-**Example Session:**
-```bash
-$ salloc --cpus-per-task=4 --mem=8G
-salloc: Granted job allocation 109
-$ # You now have resources allocated
-$ exit  # Release the allocation
-salloc: Relinquishing job allocation 109
-```
-
-###  srun - Execute Commands
-Launch applications on allocated compute resources:
-
-```bash
-# Run command directly (allocates resources automatically)
-srun python my_script.py
-
-# Run with specific resources
-srun --cpus-per-task=4 --mem=8G python my_script.py
-
-# Run interactively after salloc
-salloc --cpus-per-task=4 --mem=8G
-srun python interactive_script.py
 
 
-```
 
 
 **Job Control Commands:**
@@ -272,7 +234,7 @@ python -m pdb my_script.py
 exit
 ```
 
-#### Best Practices
+#### Best Practices for Interactive
 
 1. **Exit when done:** Always exit your interactive session when finished to free up resources:
 ```bash
@@ -287,19 +249,6 @@ exit
 ```
 
 
-#### Troubleshooting
-
-**Session Pending**
-
-If your interactive session is pending:
-```bash
-squeue -u $USER
-```
-
-Check the reason in the `NODELIST(REASON)` column:
-- `Resources`: No available resources, wait or try fewer resources
-- `Priority`: Other jobs have higher priority
-- `MaxJobsPerAccount`: You've reached the 5 job limit per group/account
 
 </details>
 
