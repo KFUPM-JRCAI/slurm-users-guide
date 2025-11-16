@@ -8,7 +8,7 @@ Slurm is a workload manager designed for clusters. It efficiently schedules jobs
 ## 📋 Table of Contents
 
 - [Monitoring SLURM](#monitoring-slurm)
-- [Utilizing SLURM](#submitting-jobs)
+- [Utilizing SLURM](#utilizing_slurm)
 - [Interactive Jobs](#interactive-jobs) 
 - [Transferring Data](#transferring-data)
 - [Account Commands](#account-commands)
@@ -143,7 +143,7 @@ JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 <details>
 <summary>⚡ Utilizing SLURM</summary>
 
-## Submitting Jobs 
+## Utilizing SLURM
 
 Commands for submitting and running jobs on the cluster.
 
