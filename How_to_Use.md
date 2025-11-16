@@ -154,18 +154,19 @@ Commands for submitting and running jobs on the cluster.
 ```bash
 sbatch my_script.slurm
 ```
-- [Script Sample](Job_Script_Templates.md) 
 
-Another way to explicitly specify the options along with the command. Adjust the options as needed
+
+You may also specify the required options directly within the command. Modify them as appropriate.
 ```
 sbatch --partition=PartitionName --gres=gpu:N --nodelist=NodeName my_script.slurm
 ```
 
+> **📋 View Script Samples:** [Job Script Templates](Job_Script_Templates.md)
 
 
 
 
-**Job Control Commands:**
+### Job Control Commands:
 ```bash
 # Cancel a job
 scancel 115
