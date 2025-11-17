@@ -24,10 +24,10 @@ Slurm is a workload manager designed for clusters. It efficiently schedules jobs
 | **Utilizing** | `sbatch script.sh` | Submit batch job |
 | | `salloc --cpus-per-task=4` | Interactive allocation |
 | | `srun python script.py` | Execute command |
-| **Transferring** | `scp file.txt user@host:~/` | Upload file |
-| | `sftp user@host` | Interactive transfer |
 | **Account** | `spasswd` | Change password |
 | | `userinfo` | View account expiration and disk quota |
+| **Transferring** | `scp file.txt user@host:~/` | Upload file |
+| | `sftp user@host` | Interactive transfer |
 
 ---
 
@@ -254,7 +254,34 @@ exit
 
 ---
 
+
 <details>
+<summary>👨🏻‍💻 Account Commands</summary>
+
+## Account Commands
+
+Commands for managing your SLURM cluster account and authentication.
+
+###  spasswd - Change SLURM Password
+**Important**: The standard `passwd` command does not work for SLURM users. Always use `spasswd`:
+
+```bash
+# Change your SLURM password
+spasswd
+```
+###  userinfo - check your expiration date and disk quota
+
+```bash
+userinfo
+```
+
+
+</details>
+
+---
+
+<details>
+   
 <summary>📁 Transferring Data</summary>
 
 ## Transferring Data
@@ -347,27 +374,4 @@ sftp> chmod 755 script.sh
 </details>
 
 ---
-
-<details>
-<summary>👨🏻‍💻 Account Commands</summary>
-
-## Account Commands
-
-Commands for managing your SLURM cluster account and authentication.
-
-###  spasswd - Change SLURM Password
-**Important**: The standard `passwd` command does not work for SLURM users. Always use `spasswd`:
-
-```bash
-# Change your SLURM password
-spasswd
-```
-###  userinfo - check your expiration date and disk quota
-
-```bash
-userinfo
-```
-
-
-</details>
 
