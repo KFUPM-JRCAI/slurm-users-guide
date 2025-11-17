@@ -27,8 +27,7 @@ Slurm is a workload manager designed for clusters. It efficiently schedules jobs
 | **Transferring** | `scp file.txt user@host:~/` | Upload file |
 | | `sftp user@host` | Interactive transfer |
 | **Account** | `spasswd` | Change password |
-| | `sacct` | Job history |
-
+| | `userinfo` | View account expiration and disk quota |
 
 ---
 
@@ -363,50 +362,12 @@ Commands for managing your SLURM cluster account and authentication.
 # Change your SLURM password
 spasswd
 ```
+###  userinfo - check your expiration date and disk quota
 
-
-
-###  Account Information Commands
-
-#### **View Your Account Details**
 ```bash
-# Show your user information
-sacctmgr show user $USER
-
-# Show association details
-sacctmgr show associations user=$USER
-
-# View account limits
-sacctmgr show account
-
-# Check your usage
-sreport user top start=2025-01-01 end=now
+userinfo
 ```
 
-#### **Job History and Accounting**
-```bash
-# View job history
-sacct
-
-# View specific job details
-sacct -j 12345 --format=JobID,JobName,State,ExitCode,Start,End
-
-# View jobs from specific date
-sacct --starttime=2025-10-01
-
-# View detailed resource usage
-sacct -j 12345 --format=JobID,MaxRSS,MaxVMSize,AveCPU,AveRSS
-```
-
-#### **Check Resource Usage**
-```bash
-# Current resource usage
-sstat -j 12345 --format=AveCPU,AveRSS,MaxRSS
-
-# Monitor running job
-watch sstat -j 12345 --format=AveCPU,AveRSS,MaxRSS
-
-```
 
 </details>
 
