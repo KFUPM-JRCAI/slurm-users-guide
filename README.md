@@ -8,19 +8,21 @@ A simple guide to using SLURM (Simple Linux Utility for Resource Management) on 
 ### 📊 Partition Details
 | Partition | Purpose | Time Limit | Nodes | GPUs |
 |-----------|---------|------------|-------|------|
-| **A100** | Large Models| 24 hours | server02 | 6x A100 |
-| **RTX3090*** | GPU computing | 24 hours | jrcai[01-02,08] | 2x (2xRTX 3090),1x(3xRTX 3090) |
-| **A6000** | GPU computing | 24 hours | jrcai[18],server01 | 1x(2xA6000) 1x(8xA6000) |
+| **A100** | Large Models| 48 hours | server02 | 6x A100 |
+| **RTX3090(Default)** | GPU computing | 48 hours | jrcai[01-02,08] | 2x (2xRTX 3090),1x(3xRTX 3090) |
+| **A6000** | GPU computing | 48 hours | jrcai[18],server01 | 1x(2xA6000) 1x(8xA6000) |
 | **LoginNode** | Access only | - | login01 | Login access |
 
-*\* Default partition*
+
+> [!WARNING]
+> Login nodes (login01) are for access only and should not be used to run scripts or computational workloads.
 
 ### Available Nodes and Their Resources
 
 | Node | GPUs | GPU Type | VRAM | CPUs | Memory |
 |------|------|----------|------|------|--------|
 | server02 | 6 | A100 | 80GB | 255 | ~2TB |
-| server02 | 8 | A6000 | 49GB | 64 | ~1TB |
+| server01 | 8 | A6000 | 49GB | 64 | ~1TB |
 | jrcai18 | 2 | A6000 | 48GB | 32 | ~256GB |
 | jrcai01 | 2 | RTX 3090 | 24GB | 48 | ~64GB |
 | jrcai02 | 2 | RTX 3090 | 24GB | 48 | ~64GB |
