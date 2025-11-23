@@ -36,7 +36,10 @@ A simple guide to using SLURM (Simple Linux Utility for Resource Management) on 
   - **A100 Partition**: 1 job limit per group
   - **RTX3090 Partition (Default)**: Groups can submit 1 additional GPU job by specifying this partition
   - **A6000 Partition**: Groups can submit 1 additional GPU job by specifying this partition
+### Model Zoo
+Our model zoo contains 90+ models sourced from HuggingFace, including Arabic-specialized models and multilingual LLMs.
 
+[Model Zoo](model_zoo.md)
 
 ## 📖 Documentation
 
