@@ -47,7 +47,6 @@ All models listed below are downloaded locally and sourced from HuggingFace. For
 | gpt-oss-120b | GPT-OSS | 120B | Base | Open-source GPT |
 | jais-13b | JAIS | 13B | Base | Arabic-centric |
 | jais-13b-chat | JAIS | 13B | Chat | Arabic-centric |
-| jais-13b-chat-GRPO | JAIS | 13B | Chat | GRPO-tuned |
 | jais-30b-chat-v1 | JAIS | 30B | Chat | Version 1 |
 | jais-30b-chat-v3 | JAIS | 30B | Chat | Version 3 |
 | jais-30b-v1 | JAIS | 30B | Base | Version 1 |
