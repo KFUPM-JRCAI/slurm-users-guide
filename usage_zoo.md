@@ -2,6 +2,11 @@
 
 All models in our model zoo are HuggingFace models. For complete documentation and model-specific details, please visit the model's page on [HuggingFace](https://huggingface.co/).
 
+## Path
+```
+/raid_storage/shared_models/
+```
+
 ## Basic Usage Example
 
 ```python
