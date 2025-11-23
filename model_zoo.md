@@ -15,13 +15,11 @@ All models listed below are downloaded locally and sourced from HuggingFace. For
 | AceGPT-7B | AceGPT | 7B | Base | Chinese-Arabic bilingual |
 | AceGPT-7B-chat | AceGPT | 7B | Chat | Chinese-Arabic bilingual |
 | AceGPT-13B-chat | AceGPT | 13B | Chat | Chinese-Arabic bilingual |
-| AceGPT-13B-chat-GRPO | AceGPT | 13B | Chat | GRPO-tuned |
 | AceGPT-v1.5-13B | AceGPT | 13B | Base | Version 1.5 |
 | AceGPT-v1.5-13B-Chat | AceGPT | 13B | Chat | Version 1.5 |
 | AceGPT-v2-8B | AceGPT | 8B | Base | Version 2 |
 | AceGPT-v2-8B-Chat | AceGPT | 8B | Chat | Version 2 |
 | ALLaM-7B-Instruct-preview | ALLaM | 7B | Instruct | Arabic LLM |
-| ALLaM-7B-Instruct-preview-GRPO | ALLaM | 7B | Instruct | GRPO-tuned |
 | ArabianGPT-01B | ArabianGPT | 1B | Base | Arabic GPT |
 | ArabianGPT-03B | ArabianGPT | 3B | Base | Arabic GPT |
 | ArabianGPT-08B-V2 | ArabianGPT | 8B | Base | Arabic GPT v2 |
