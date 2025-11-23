@@ -1,5 +1,11 @@
 # Model Zoo
 
+All models listed below are downloaded locally and sourced from HuggingFace. For detailed information about each model, visit their respective HuggingFace model cards.
+
+**[View Usage Guide](usage_zoo.md)** - Learn how to load and use these models
+
+## NLP Models
+
 | Model Name | Family | Size | Type | Notes |
 |------------|--------|------|------|-------|
 | AceGPT-7B | AceGPT | 7B | Base | Chinese-Arabic bilingual |
@@ -87,5 +93,10 @@
 | Qwen3-30B-A3B | Qwen | 30B | Base | A3B architecture |
 | Qwen3-30B-A3B-Instruct-2507 | Qwen | 30B | Instruct | July 2025 |
 | Qwen3-30B-A3B-Thinking-2507 | Qwen | 30B | Instruct | Reasoning-focused |
+
+## Other Models
+
+| Model Name | Family | Size | Type | Notes |
+|------------|--------|------|------|-------|
 | whisper-large-v3 | Whisper | Large | Speech | OpenAI |
 | whisper-large-v3-turbo | Whisper | Large | Speech | Turbo variant |
