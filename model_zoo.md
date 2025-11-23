@@ -2,6 +2,10 @@
 
 All models listed below are downloaded locally and sourced from HuggingFace. For detailed information about each model, visit their respective HuggingFace model cards.
 
+## Path
+```
+/raid_storage/shared_models/
+```
 **[View Usage Guide](usage_zoo.md)** - Learn how to load and use these models
 
 ## NLP Models
