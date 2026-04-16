@@ -234,6 +234,9 @@ python -m pdb my_script.py
 exit
 ```
 
+⚡ [How to run Jupyter Notebook](https://github.com/KFUPM-JRCAI/slurm-users-guide/blob/main/Jupyter_Access.md)
+
+
 #### Best Practices for Interactive
 
 1. **Exit when done:** Always exit your interactive session when finished to free up resources:
