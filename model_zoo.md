@@ -4,7 +4,7 @@ All models listed below are downloaded locally and sourced from HuggingFace. For
 
 ## Path
 ```
-/raid_storage/shared_models/
+/SLURM/public/models/
 ```
 **[View Usage Guide](usage_zoo.md)** - Learn how to load and use these models
 
