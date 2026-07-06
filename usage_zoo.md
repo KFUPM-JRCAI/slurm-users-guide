@@ -4,7 +4,7 @@ All models in our model zoo are HuggingFace models. For complete documentation a
 
 ## Path
 ```
-/raid_storage/shared_models/
+/SLURM/public/models/
 ```
 
 ## Basic Usage Example
@@ -13,7 +13,7 @@ All models in our model zoo are HuggingFace models. For complete documentation a
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
-model_path = "/raid_storage/shared_models/Qwen2.5-3B-Instruct"
+model_path = /SLURM/public/models/Qwen2.5-3B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForCausalLM.from_pretrained(
     model_path,
