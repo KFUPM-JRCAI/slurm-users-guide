@@ -6,36 +6,55 @@ A simple guide to using SLURM (Simple Linux Utility for Resource Management) on 
 
 ##  Current Cluster Setup
 ### 📊 Partition Details
-| Partition | Purpose | Time Limit | Nodes | GPUs |
-|-----------|---------|------------|-------|------|
-| **A100** | Large Models| 48 hours | server02 | 6x A100 |
-| **RTX3090(Default)** | GPU computing | 48 hours | jrcai[01-02,08] | 2x (2xRTX 3090),1x(3xRTX 3090) |
-| **A6000** | GPU computing | 48 hours | jrcai[18],server01 | 1x(2xA6000) 1x(8xA6000) |
+| Partition | Purpose | Default / Max Time | Nodes | GPUs |
+|-----------|---------|--------------------|-------|------|
+| **A100** | Large models | 16 h / 2 days | server02 | 6× A100 (80 GB) |
+| **RTX3090** (Default) | GPU computing | 16 h / 2 days | jrcai[01-02,06-10] | 19× RTX 3090 (24 GB) |
+| **A6000** | GPU computing | 16 h / 2 days | jrcai[17-19], server01 | 14× A6000 (48 GB) |
+| **A5000** | GPU computing | 16 h / 2 days | jrcai[12-13] | 8× A5000 (24 GB) |
+| **A4500** | GPU computing | 16 h / 2 days | jrcai[14-16,21] | 8× RTX A4500 (20 GB) |
+| **interactive** | Short interactive sessions | 2 h / 2 h | all compute nodes | any available |
 | **LoginNode** | Access only | - | login01 | Login access |
 
+> [!NOTE]
+> If you don't specify a partition, your job runs on **RTX3090** (the default). Jobs get a **16 h** time limit if you don't request one, up to a **2-day** maximum.
 
 > [!WARNING]
 > Login nodes (login01) are for access only and should not be used to run scripts or computational workloads.
 
 ### Available Nodes and Their Resources
 
-| Node | GPUs | GPU Type | VRAM | CPUs | Memory |
-|------|------|----------|------|------|--------|
-| server02 | 6 | A100 | 80GB | 255 | ~2TB |
-| server01 | 8 | A6000 | 49GB | 64 | ~1TB |
-| jrcai18 | 2 | A6000 | 48GB | 32 | ~256GB |
-| jrcai01 | 2 | RTX 3090 | 24GB | 48 | ~64GB |
-| jrcai02 | 2 | RTX 3090 | 24GB | 48 | ~64GB |
-| jrcai08 | 3 | RTX 3090 | 24GB | 64 | ~256GB |
+| Node | Partition | GPUs | GPU Type | VRAM | CPUs | Memory |
+|------|-----------|------|----------|------|------|--------|
+| server02 | A100 | 6 | A100 | 80 GB | 255 | ~2 TB |
+| server01 | A6000 | 8 | A6000 | 48 GB | 64 | ~1 TB |
+| jrcai17 \* | A6000 | 2 | A6000 | 48 GB | 28 | ~256 GB |
+| jrcai18 | A6000 | 2 | A6000 | 48 GB | 32 | ~256 GB |
+| jrcai19 | A6000 | 2 | A6000 | 48 GB | 32 | ~256 GB |
+| jrcai01 | RTX3090 | 2 | RTX 3090 | 24 GB | 48 | ~64 GB |
+| jrcai02 | RTX3090 | 2 | RTX 3090 | 24 GB | 48 | ~64 GB |
+| jrcai06 | RTX3090 | 3 | RTX 3090 | 24 GB | 64 | ~256 GB |
+| jrcai07 | RTX3090 | 3 | RTX 3090 | 24 GB | 64 | ~256 GB |
+| jrcai08 | RTX3090 | 3 | RTX 3090 | 24 GB | 64 | ~256 GB |
+| jrcai09 | RTX3090 | 3 | RTX 3090 | 24 GB | 64 | ~256 GB |
+| jrcai10 | RTX3090 | 3 | RTX 3090 | 24 GB | 64 | ~256 GB |
+| jrcai12 | A5000 | 4 | A5000 | 24 GB | 64 | ~256 GB |
+| jrcai13 | A5000 | 4 | A5000 | 24 GB | 64 | ~256 GB |
+| jrcai14 | A4500 | 2 | RTX A4500 | 20 GB | 32 | ~256 GB |
+| jrcai15 | A4500 | 2 | RTX A4500 | 20 GB | 32 | ~256 GB |
+| jrcai16 | A4500 | 2 | RTX A4500 | 20 GB | 20 | ~128 GB |
+| jrcai21 | A4500 | 2 | RTX A4500 | 20 GB | 20 | ~128 GB |
 
+\* jrcai17 is configured but not yet in service (`State=FUTURE`).
+
+**Total: ~55 GPUs across 18 compute nodes.**
 
 ### 👥 Group Management
 - **Advisor Groups**: Each advisor has a group with their students
-- **Shared Storage**: Groups are hard-limited to 1 TB of shared disk space.
-- **Job Limits**: 
-  - **A100 Partition**: 1 job limit per group
-  - **RTX3090 Partition (Default)**: Groups can submit 1 additional GPU job by specifying this partition
-  - **A6000 Partition**: Groups can submit 1 additional GPU job by specifying this partition
+- **Shared Storage**: Each group has a shared directory at `/SLURM/group/<groupName>`, hard-limited to 4 TB of disk space.
+- **Job Limits** — *cluster-wide, GPU-based (updated policy):*
+  - Up to **6 GPUs' worth of concurrent running jobs per group**, across the entire cluster (previously: one job per partition).
+  - **A100 partition**: given its high demand, max **2 jobs per group** and **1 job per user** at any time.
 ### Model Zoo
 Our model zoo contains 90+ models sourced from HuggingFace, including Arabic-specialized models and multilingual LLMs.
 
@@ -77,7 +96,7 @@ graph TD
 - **Technical Issues**: mohammed.sinan@kfupm.edu.sa
 - **Account Problems**: Submit ticket through proper channels
 
-*Last Updated: 16/9/2025*  
+*Last Updated: 6/9/2026*  
 *By: Mohammed AlSinan (mohammed.sinan@kfupm.edu.sa)*
 
 **Login Node**: (check your email/registration details)
