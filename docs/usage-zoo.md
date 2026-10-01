@@ -1,19 +1,24 @@
+---
+icon: material/database-search-outline
+---
+
 # Model Usage Guide
 
 All models in our model zoo are HuggingFace models. For complete documentation and model-specific details, please visit the model's page on [HuggingFace](https://huggingface.co/).
 
 ## Path
-```
+
+```title="Local models directory"
 /SLURM/public/models/
 ```
 
 ## Basic Usage Example
 
-```python
+```python title="load_model.py" hl_lines="5"
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
-model_path = /SLURM/public/models/Qwen2.5-3B-Instruct"
+model_path = "/SLURM/public/models/Qwen2.5-3B-Instruct"  # swap for any model in the Model Zoo
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForCausalLM.from_pretrained(
     model_path,
@@ -27,6 +32,8 @@ response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
 print(response)
 ```
+
+See the [Model Zoo](model-zoo.md) for the full list of available model paths.
 
 ## Installation
 

@@ -1,0 +1,210 @@
+/* ---------------------------------------------------------------- */
+/* KFUPM JRCAI brand palette                                        */
+/* ---------------------------------------------------------------- */
+
+/*
+ * Zensical only ships the slate-mode half of Material's light/dark image
+ * swap (hiding #only-light images when dark). Add the missing reverse rule
+ * so #only-dark images are hidden in light mode too.
+ */
+[data-md-color-scheme="default"] img[src$="#only-dark"],
+[data-md-color-scheme="default"] img[src$="#gh-dark-mode-only"] {
+  display: none;
+}
+:root {
+  /* Brand */
+  --brand-navy:   #284475;
+  --brand-indigo: #3F4283;
+  --brand-violet: #5E55A2;
+  --brand-sky:    #70B4E3;
+  --brand-coral:  #ED673B;
+  --brand-orange: #F08140;
+  --brand-amber:  #F9B34D;
+  --brand-lime:   #93C347;
+  --brand-green:  #74BC6E;
+  --brand-teal:   #358186;
+  --brand-ink:    #231F20;
+
+  /* Roles (light mode) */
+  --color-primary:   var(--brand-navy);
+  --color-secondary: var(--brand-teal);
+  --color-accent:    var(--brand-coral);
+
+  /* Logo gradients (left to right, as in the triangles) */
+  --grad-indigo: linear-gradient(60deg, #70B4E3, #5E55A2, #3F4283);
+  --grad-coral:  linear-gradient(60deg, #F9B34D, #F08140, #DA6243);
+  --grad-teal:   linear-gradient(90deg, #93C347, #74BC6E, #358186, #284475);
+  --grad-green:  linear-gradient(60deg, #93C347, #74BC6E, #358186);
+}
+
+/*
+ * Only override primary/accent/link colors. Material computes code block,
+ * admonition, border and muted-text colors *relative to* --md-default-bg-color
+ * and --md-default-fg-color, so overriding those directly breaks contrast
+ * throughout the rest of the dark theme. Leave them to Material's own
+ * well-tuned default/slate backgrounds.
+ *
+ * Both the manual toggle and Material's own OS-preference detection set
+ * [data-md-color-scheme] on <html>, so gating on that attribute (rather than
+ * a `prefers-color-scheme` media query) keeps the toggle and OS setting in
+ * sync instead of fighting each other.
+ */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:              var(--color-primary);
+  --md-primary-fg-color--light:       var(--brand-sky);
+  --md-primary-fg-color--dark:        var(--brand-ink);
+  --md-accent-fg-color:               var(--color-accent);
+  --md-accent-fg-color--transparent:  rgb(237 103 59 / 10%);
+  /* Links match the accent (orange), per "light = blue + orange". */
+  --md-typeset-a-color:               var(--color-accent);
+}
+
+[data-md-color-scheme="slate"] {
+  /*
+   * Material derives ALL neutral grays (background, footer, code bg, muted
+   * text, etc.) from hsla(var(--md-hue), ...) literals baked into its own
+   * CSS. Overriding --md-hue alone retints every one of those automatically
+   * (CSS vars resolve at use-time) without us having to restate each rule —
+   * this moves the whole dark theme's mood from Material's default blue-grey
+   * toward green, which is the actual source of "everything reads blue".
+   */
+  --md-hue: 155;
+
+  /* Keep Material's own hsla(hue, sat%, lightness%, alpha) formula, just
+     retinted to green. Darker than the previous attempt (11%/15%), closer
+     to stock Material's original 5%/10% but with a touch more headroom. */
+  --md-default-bg-color:         hsla(155, 22%, 7%, 1);
+  --md-default-bg-color--light:  hsla(155, 22%, 7%, 0.54);
+  --md-default-bg-color--lighter: hsla(155, 22%, 7%, 0.26);
+  --md-default-bg-color--lightest: hsla(155, 22%, 7%, 0.07);
+  --md-code-bg-color:             hsla(155, 24%, 11%, 1);
+  --md-code-bg-color--light:      hsla(155, 24%, 11%, 0.9);
+  --md-code-bg-color--lighter:    hsla(155, 24%, 11%, 0.54);
+
+  /* Header: a neutral near-black that blends with the page background,
+     instead of a distinct colored bar — green stays reserved for accents
+     (links, hover, highlights) rather than painting the whole top bar. */
+  --md-primary-fg-color:              hsla(155, 18%, 13%, 1);
+  --md-primary-fg-color--light:       hsla(155, 18%, 20%, 1);
+  --md-primary-fg-color--dark:        hsla(155, 18%, 9%, 1);
+
+  /* Hover/active-nav/focus "pop" highlight. */
+  --md-accent-fg-color:               var(--brand-lime);
+  --md-accent-fg-color--transparent:  rgb(147 195 71 / 14%);
+
+  /* Links match the accent (lime green), per "dark = green palette". */
+  --md-typeset-a-color:                var(--brand-lime);
+
+  /* The hl_lines highlighted-code-line color is a separate literal Material
+     ships (a washed-out blue), unrelated to --md-hue or accent — fix it to
+     match the lime highlight explicitly. */
+  --md-code-hl-color:                  var(--brand-lime);
+  --md-code-hl-color--light:           rgb(147 195 71 / 16%);
+}
+
+/*
+ * Material ships [data-md-color-scheme=slate][data-md-color-primary=X]
+ * tables that override --md-typeset-a-color specifically (to recolor links
+ * when using one of its named palette presets). Since Zensical's generated
+ * palette toggle defaults data-md-color-primary="indigo" on both options
+ * even though we never named a preset, that two-attribute rule (higher
+ * specificity than our single-attribute one above) was winning and kept
+ * idle links a stock Material blue (#5488e8) in dark mode only — there is
+ * no equivalent table for [data-md-color-scheme=default], which is why
+ * light mode was never affected. Match its specificity to win cleanly.
+ */
+[data-md-color-scheme="slate"][data-md-color-primary="indigo"] {
+  --md-typeset-a-color: var(--brand-lime);
+}
+
+.md-button--primary {
+  border-color: transparent;
+  color: #fff;
+}
+
+[data-md-color-scheme="default"] .md-button--primary {
+  background: var(--grad-indigo);
+}
+
+[data-md-color-scheme="slate"] .md-button--primary {
+  background: var(--grad-green);
+}
+
+.md-button--primary:hover {
+  filter: brightness(1.08);
+  color: #fff;
+}
+
+/*
+ * Material's primary nav has a *more specific* hover rule than the generic
+ * `.md-nav__link:hover` one, which neutralizes hover back to plain gray text
+ * instead of the accent color — only the clicked/active item ever shows a
+ * color. Override that specific selector so hovering previews the highlight
+ * too, not just clicking.
+ */
+.md-nav--primary .md-nav__link[for]:hover:not(.md-nav__link--active),
+.md-nav--primary .md-nav__link[href]:hover:not(.md-nav__link--active),
+.md-nav--primary .md-nav__link[href]:focus:not(.md-nav__link--active) {
+  color: var(--md-accent-fg-color);
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+/*
+ * The "modern" variant deliberately keeps the header neutral/translucent
+ * (it only uses --md-primary-fg-color for the primary button). We keep
+ * "modern" for its compact sidebar nav sizing, but bring back a solid,
+ * brand-colored header bar the way the "classic" variant does.
+ */
+.md-header {
+  color: var(--md-primary-bg-color);
+  background-color: var(--md-primary-fg-color);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+/* Make grid cards clickable anywhere, not just on the inline link. */
+.grid.cards > ul > li {
+  position: relative;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  animation: card-stagger-in 0.4s ease both;
+}
+
+.grid.cards > ul > li:hover {
+  transform: translateY(-2px);
+}
+
+@keyframes card-stagger-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.grid.cards > ul > li:nth-child(1) { animation-delay: 0.03s; }
+.grid.cards > ul > li:nth-child(2) { animation-delay: 0.08s; }
+.grid.cards > ul > li:nth-child(3) { animation-delay: 0.13s; }
+.grid.cards > ul > li:nth-child(4) { animation-delay: 0.18s; }
+.grid.cards > ul > li:nth-child(5) { animation-delay: 0.23s; }
+.grid.cards > ul > li:nth-child(6) { animation-delay: 0.28s; }
+.grid.cards > ul > li:nth-child(n+7) { animation-delay: 0.33s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .grid.cards > ul > li {
+    animation: none;
+  }
+}
+
+.grid.cards > ul > li a:last-of-type {
+  font-weight: 700;
+}
+
+.grid.cards > ul > li a:last-of-type::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}

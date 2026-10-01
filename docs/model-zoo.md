@@ -1,12 +1,22 @@
+---
+icon: material/database-search-outline
+---
+
 # Model Zoo
 
 All models listed below are downloaded locally and sourced from HuggingFace. For detailed information about each model, visit their respective HuggingFace model cards.
 
 ## Path
-```
+
+```title="Local models directory"
 /SLURM/public/models/
 ```
-**[View Usage Guide](usage_zoo.md)** - Learn how to load and use these models
+
+[:octicons-arrow-right-24: View Usage Guide](usage-zoo.md){ .md-button .md-button--primary }
+
+!!! tip
+
+    Click a column header below to sort a table by that column.
 
 ## NLP Models
 

@@ -1,0 +1,119 @@
+[project]
+site_url = "https://kfupm-jrcai.github.io/slurm-users-guide/"
+site_name = "SLURM Users Guide"
+site_description = "A guide to using SLURM on KFUPM JRCAI clusters"
+
+repo_url = "https://github.com/KFUPM-JRCAI/slurm-users-guide"
+repo_name = "KFUPM-JRCAI/slurm-users-guide"
+edit_uri = "edit/main/docs/"
+
+nav = [
+  { "Home" = "index.md" },
+  { "Cluster Resources" = "cluster-resources.md" },
+  { "Group Policies" = "group-policies.md" },
+  { "How to Connect" = "how-to-connect.md" },
+  { "Using SLURM" = [{ "Overview" = "using-slurm/index.md" }, { "Monitoring" = "using-slurm/monitoring.md" }, { "Submitting Jobs" = "using-slurm/submitting-jobs.md" }, { "Interactive Jobs" = "using-slurm/interactive-jobs.md" }, { "Transferring Data" = "using-slurm/transferring-data.md" }, { "Account Commands" = "using-slurm/account-commands.md" }] },
+  { "Job Script Templates" = "job-script-templates.md" },
+  { "Jupyter Access" = "jupyter-access.md" },
+  { "Model Zoo" = [{ "Overview" = "model-zoo.md" }, { "Usage Guide" = "usage-zoo.md" }] },
+]
+
+extra_css = ["stylesheets/extra.css"]
+extra_javascript = [
+  "https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js",
+  "javascripts/tablesort.js",
+]
+
+[project.plugins.search]
+
+[project.plugins.glightbox]
+
+[project.theme]
+# variant = "classic"
+# custom_dir = "overrides"
+# favicon = "images/favicon.png"
+language = "en"
+features = [
+  "announce.dismiss",
+  # "content.action.edit",
+  # "content.action.view",
+  "content.action.edit",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "content.footnote.tooltips",
+  "content.tabs.link",
+  "content.tooltips",
+  # "header.autohide",
+  # "navigation.expand",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  # "navigation.instant.progress",
+  "navigation.path",
+  # "navigation.prune",
+  "navigation.sections",
+  # "navigation.tabs",
+  # "navigation.tabs.sticky",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  # "toc.follow",
+  # "toc.integrate",
+]
+
+# logo = "assets/logo.png"
+
+# [project.theme.icon]
+# logo = "lucide/smile"
+
+# [project.theme.font]
+# text = "Inter"
+# code = "Jetbrains Mono"
+
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/KFUPM-JRCAI/slurm-users-guide"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.arithmatex.generic = true
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.magiclink = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+# pymdownx.snippets.base_path = "includes"
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}

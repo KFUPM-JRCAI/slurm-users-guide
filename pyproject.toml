@@ -1,0 +1,11 @@
+[project]
+name = "slurm-users-guide"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "zensical>=0.0.67",
+]
