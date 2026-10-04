@@ -32,8 +32,12 @@ This guide explains how to run Jupyter Notebook on the SLURM cluster using two d
 
     4.  **Start Jupyter Notebook/Lab**
 
+        !!! note
+
+            `jupyter-start` is enabled by the line `cluster_env jupyter` in your `~/.bashrc` (on by default). If you get "command not found", check that line isn't commented out.
+
         ```bash
-        jupyter start
+        jupyter-start
         ```
 
         Wait for initialization. Once ready, a URL with a token will be printed in the terminal.

@@ -17,8 +17,8 @@ icon: material/file-code-outline
     #SBATCH --partition=XXXX               # Partition (queue) name
     #SBATCH --mem=8G                       # Total memory limit
 
-    # Activate environment
-    source .bashrc
+    # Activate environment (absolute path: batch jobs start in the submission dir)
+    source ~/.bashrc
     conda activate myenv
 
     # Execute your program
@@ -39,8 +39,8 @@ icon: material/file-code-outline
     #SBATCH --mem=32G
     #SBATCH --output=gpu_output_%j.txt
 
-    # Load modules and activate environment
-    source .bashrc
+    # Load modules and activate environment (absolute path: batch jobs start in the submission dir)
+    source ~/.bashrc
     conda activate myenv
 
     # Run GPU-enabled program
