@@ -13,7 +13,7 @@ To use SLURM, you need to connect to the login node of the cluster. Pick whichev
     For all operating systems, the command to connect via terminal is the same:
 
     ```bash title="Connect over SSH"
-    ssh username@LoginNodeIP
+    ssh <username>@<login-node>
     ```
 
     **Example connection process:**
@@ -22,7 +22,7 @@ To use SLURM, you need to connect to the login node of the cluster. Pick whichev
 
 === "Visual Studio Code"
 
-    If you have VS Code installed, use the Remote-SSH extension to connect to your workstation.
+    If you have VS Code installed, use the Remote-SSH extension to connect to the login node.
 
     [Download VS Code :material-download:](https://code.visualstudio.com/download){ .md-button }
 
@@ -38,7 +38,7 @@ To use SLURM, you need to connect to the login node of the cluster. Pick whichev
 
         ![Add New SSH Host](assets/images/how-to-connect/vscode-add-ssh-host.png)
 
-    4.  **Enter the connection details**, `username@workstation_ip_address`
+    4.  **Enter the connection details**, `<username>@<login-node>`
 
         ![Enter SSH Command](assets/images/how-to-connect/vscode-enter-ssh-command.png)
 

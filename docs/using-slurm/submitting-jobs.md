@@ -21,7 +21,7 @@ Commands for submitting and running batch jobs on the cluster.
     You can also specify options directly on the command line. Modify them as appropriate:
 
     ```bash
-    sbatch --partition=PartitionName --gres=gpu:N --nodelist=NodeName my_script.slurm
+    sbatch --partition=<partition> --gres=gpu:N --nodelist=<node> my_script.slurm
     ```
 
 > :material-file-document-outline: **View script samples:** [Job Script Templates](../job-script-templates.md)
@@ -33,7 +33,7 @@ Commands for submitting and running batch jobs on the cluster.
 scancel 115
 
 # Cancel all your jobs
-scancel -u username
+scancel -u <username>
 
 # Hold a job
 scontrol hold 115

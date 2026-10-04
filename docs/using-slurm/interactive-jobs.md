@@ -8,13 +8,13 @@ icon: material/console-line
 
 - **Partition name:** `interactive`
 - **Available nodes:** All compute nodes
-- **Time limit:** Jobs are limited to 1 hour
+- **Time limit:** Jobs are limited to 2 hours
 - **GPU limit:** Maximum of 3 GPUs across all interactive jobs simultaneously
 - **Job limit:** Up to 5 concurrent jobs per group/account
 
-!!! danger "Sessions terminate after 1 hour"
+!!! danger "Sessions terminate after 2 hours"
 
-    Sessions on the `interactive` partition automatically **terminate after 1 hour**. This partition is designed for development, testing, and debugging only.
+    Sessions on the `interactive` partition automatically **terminate after 2 hours**. This partition is designed for development, testing, and debugging only.
 
     For longer or production jobs, submit to the appropriate batch partitions instead.
 

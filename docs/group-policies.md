@@ -41,7 +41,7 @@ Each group has a shared directory at `/SLURM/group/<groupName>`, hard-limited to
     ```
 
 - **Don't leave sessions idle** — interactive sessions consume resources even when idle.
-- **Use batch jobs for long runs** — if your job takes longer than 1 hour, submit it as a batch job to another partition instead:
+- **Use batch jobs for long runs** — if your job takes longer than 2 hours, submit it as a batch job to another partition instead:
 
     ```bash
     sbatch -p RTX3090 my_long_job.sh

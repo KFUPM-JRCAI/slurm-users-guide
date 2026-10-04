@@ -14,29 +14,29 @@ Commands for moving files between your local machine and the cluster.
 
     ```bash
     # Upload a single file
-    scp file.txt username@LoginNodeIP:~/
+    scp file.txt <username>@<login-node>:~/
 
     # Upload a directory
-    scp -r /local/directory username@LoginNodeIP:~/destination/
+    scp -r /local/directory <username>@<login-node>:~/destination/
 
     # Upload with specific destination
-    scp -r /Downloads/my-project mohammed_slurm@LoginNodeIP:~/data/
+    scp -r /Downloads/my-project mohammed_slurm@<login-node>:~/data/
 
     # Upload to specific path
-    scp dataset.csv mohammed_slurm@LoginNodeIP:/home/mohammed_slurm/projects/
+    scp dataset.csv mohammed_slurm@<login-node>:/home/mohammed_slurm/projects/
     ```
 
     **Download from cluster:**
 
     ```bash
     # Download a file
-    scp username@LoginNodeIP:~/results.txt ./
+    scp <username>@<login-node>:~/results.txt ./
 
     # Download a directory
-    scp -r username@LoginNodeIP:~/output/ ./local-results/
+    scp -r <username>@<login-node>:~/output/ ./local-results/
 
     # Download with specific source
-    scp mohammed_slurm@LoginNodeIP:~/data/processed_data.csv ./
+    scp mohammed_slurm@<login-node>:~/data/processed_data.csv ./
     ```
 
 === "sftp"
@@ -45,7 +45,7 @@ Commands for moving files between your local machine and the cluster.
 
     ```bash
     # Connect to cluster
-    sftp username@LoginNodeIP
+    sftp <username>@<login-node>
 
     # SFTP commands once connected:
     sftp> pwd                    # Show remote directory

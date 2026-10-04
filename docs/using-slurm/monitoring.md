@@ -81,7 +81,7 @@ Query the status of jobs in the queue:
 squeue
 
 # View only your jobs
-squeue -u username
+squeue -u <username>
 
 # View specific job
 squeue -j 115

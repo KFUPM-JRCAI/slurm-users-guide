@@ -107,7 +107,7 @@ graph TD
 - **Technical Issues**: mohammed.sinan@kfupm.edu.sa
 - **Account Problems**: Submit ticket through proper channels
 
-**Login Node**: (check your email/registration details)
+**Login node address**: sent with your account details.
 
 ---
 
