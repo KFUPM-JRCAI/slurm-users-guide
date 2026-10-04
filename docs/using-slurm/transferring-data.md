@@ -20,10 +20,10 @@ Commands for moving files between your local machine and the cluster.
     scp -r /local/directory <username>@<login-node>:~/destination/
 
     # Upload with specific destination
-    scp -r /Downloads/my-project mohammed_slurm@<login-node>:~/data/
+    scp -r /Downloads/my-project slurm_mohammedsinan@<login-node>:~/data/
 
     # Upload to specific path
-    scp dataset.csv mohammed_slurm@<login-node>:/home/mohammed_slurm/projects/
+    scp dataset.csv slurm_mohammedsinan@<login-node>:/SLURM/home/slurm_mohammedsinan/projects/
     ```
 
     **Download from cluster:**
@@ -36,7 +36,7 @@ Commands for moving files between your local machine and the cluster.
     scp -r <username>@<login-node>:~/output/ ./local-results/
 
     # Download with specific source
-    scp mohammed_slurm@<login-node>:~/data/processed_data.csv ./
+    scp slurm_mohammedsinan@<login-node>:~/data/processed_data.csv ./
     ```
 
 === "sftp"

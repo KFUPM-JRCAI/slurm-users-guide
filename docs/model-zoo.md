@@ -27,13 +27,11 @@ All models listed below are downloaded locally and sourced from HuggingFace. For
 | AceGPT-7B-chat | AceGPT | 7B | Chat | Chinese-Arabic bilingual |
 | AceGPT-13B | AceGPT | 13B | Base | Chinese-Arabic bilingual |
 | AceGPT-13B-chat | AceGPT | 13B | Chat | Chinese-Arabic bilingual |
-| AceGPT-13B-chat-GRPO | AceGPT | 13B | Chat (GRPO) | GRPO-tuned variant (empty dir) |
 | AceGPT-v1.5-13B | AceGPT | 13B | Base | v1.5 Arabic LLM |
 | AceGPT-v1.5-13B-Chat | AceGPT | 13B | Chat | v1.5 Arabic LLM |
 | AceGPT-v2-8B | AceGPT | 8B | Base | v2, Llama-3 based |
 | AceGPT-v2-8B-Chat | AceGPT | 8B | Chat | v2, Llama-3 based |
 | ALLaM-7B-Instruct-preview | ALLaM | 7B | Instruct | SDAIA Saudi Arabic LLM |
-| ALLaM-7B-Instruct-preview-GRPO | ALLaM | 7B | Instruct (GRPO) | GRPO-tuned (empty dir) |
 | ArabianGPT-01B | ArabianGPT | 0.1B | Base | Arabic GPT (Prince Sultan Univ.) |
 | ArabianGPT-03B | ArabianGPT | 0.3B | Base | Arabic GPT |
 | ArabianGPT-08B-V2 | ArabianGPT | 0.8B | Base | Arabic GPT v2 |
@@ -61,7 +59,6 @@ All models listed below are downloaded locally and sourced from HuggingFace. For
 | gpt-oss-120b | GPT-OSS | 120B | Open weights | OpenAI open-weights release |
 | jais-13b | Jais | 13B | Base | Arabic LLM (Inception/G42) |
 | jais-13b-chat | Jais | 13B | Chat | Arabic LLM |
-| jais-13b-chat-GRPO | Jais | 13B | Chat (GRPO) | GRPO-tuned (empty dir) |
 | jais-30b-v1 | Jais | 30B | Base | Arabic LLM v1 |
 | jais-30b-v3 | Jais | 30B | Base | Arabic LLM v3 |
 | jais-30b-chat-v1 | Jais | 30B | Chat | Arabic LLM v1 |

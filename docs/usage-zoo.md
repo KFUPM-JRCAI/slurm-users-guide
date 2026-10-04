@@ -35,11 +35,45 @@ print(response)
 
 See the [Model Zoo](model-zoo.md) for the full list of available model paths.
 
+## Large Models (Multiple GPUs)
+
+Models larger than one GPU's memory (for example 32B or 70B) can be spread across several GPUs. Request more GPUs for the job and let transformers place the model.
+
+```bash
+salloc -p A6000 --gres=gpu:2
+```
+
+```python title="load_large_model.py" hl_lines="10"
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
+
+model_path = "/SLURM/public/models/Qwen2.5-32B-Instruct"  # too large for one GPU
+tokenizer = AutoTokenizer.from_pretrained(model_path)
+model = AutoModelForCausalLM.from_pretrained(
+    model_path,
+    torch_dtype=torch.bfloat16,
+    device_map="auto",  # spread the model across all GPUs in the job
+)
+
+prompt = "What is the color of the sky?"
+inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+outputs = model.generate(**inputs, max_new_tokens=20)
+response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+print(response)
+```
+
+!!! tip "Rule of thumb"
+
+    In bf16 a model needs about 2 GB of GPU memory per billion parameters, plus some headroom — a 32B model needs ~64 GB (2× A6000 48 GB, or 1× A100 80 GB).
+
 ## Installation
 
 ```bash
-pip install transformers torch
+pip install transformers torch accelerate
 ```
+
+`device_map="auto"` (used for multi-GPU models above) requires `accelerate`.
 
 ## Finding Model Pages
 

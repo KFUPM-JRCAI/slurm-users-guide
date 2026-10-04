@@ -4,8 +4,6 @@ icon: material/connection
 
 # How to Connect
 
-Slurm (Simple Linux Utility for Resource Management) is a workload manager designed for clusters. It efficiently schedules jobs and manages resources, ensuring fair and effective utilization of computational power.
-
 To use SLURM, you need to connect to the login node of the cluster. Pick whichever method fits your workflow:
 
 === "Terminal"

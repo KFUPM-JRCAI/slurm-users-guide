@@ -4,7 +4,7 @@ icon: lucide/server
 
 # SLURM Guide — KFUPM JRCAI
 
-A simple guide to using SLURM (Simple Linux Utility for Resource Management) on KFUPM clusters.
+Slurm (Simple Linux Utility for Resource Management) is a workload manager designed for clusters. It efficiently schedules jobs and manages resources, ensuring fair and effective utilization of computational power. This guide covers how to connect to and use SLURM on KFUPM JRCAI clusters.
 
 [:octicons-arrow-right-24: How to Connect](how-to-connect.md){ .md-button .md-button--primary }
 [View on GitHub :fontawesome-brands-github:](https://github.com/KFUPM-JRCAI/slurm-users-guide){ .md-button }
@@ -111,4 +111,4 @@ graph TD
 
 ---
 
-*Last updated 6/9/2026 by Mohammed AlSinan (mohammed.sinan@kfupm.edu.sa)*
+*Last updated 10/1/2026 by Mohammed AlSinan (mohammed.sinan@kfupm.edu.sa)*
