@@ -33,7 +33,7 @@ response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 print(response)
 ```
 
-See the [Model Zoo](model-zoo.md) for the full list of available model paths.
+See the [Models](models.md) list for the full list of available model paths.
 
 ## Large Models (Multiple GPUs)
 

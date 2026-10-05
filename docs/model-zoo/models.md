@@ -12,7 +12,7 @@ All models listed below are downloaded locally and sourced from HuggingFace. For
 /SLURM/public/models/
 ```
 
-[:octicons-arrow-right-24: View Usage Guide](usage-zoo.md){ .md-button .md-button--primary }
+[:octicons-arrow-right-24: View Usage Guide](usage.md){ .md-button .md-button--primary }
 
 !!! tip
 

@@ -64,13 +64,53 @@ Slurm (Simple Linux Utility for Resource Management) is a workload manager desig
 
     [:octicons-arrow-right-24: Read more](jupyter-access.md)
 
+-   :material-harddisk:{ .lg .middle } **Storage**
+
+    ---
+
+    Home vs. group directories, quotas, and the shared `~/guide` examples folder.
+
+    [:octicons-arrow-right-24: Read more](storage.md)
+
+-   :material-help-circle-outline:{ .lg .middle } **FAQ & Troubleshooting**
+
+    ---
+
+    Common errors and what to do about them.
+
+    [:octicons-arrow-right-24: Read more](faq.md)
+
+-   :material-cog-outline:{ .lg .middle } **Environment**
+
+    ---
+
+    Shell settings, modules, the package cache, and the Model Zoo.
+
+    [:octicons-arrow-right-24: Read more](environment/index.md)
+
 -   :material-database-search-outline:{ .lg .middle } **Model Zoo**
 
     ---
 
     90+ ready-to-use HuggingFace models, including Arabic-specialized and multilingual LLMs.
 
-    [:octicons-arrow-right-24: Read more](model-zoo.md)
+    [:octicons-arrow-right-24: Read more](model-zoo/index.md)
+
+-   :material-chat-processing-outline:{ .lg .middle } **Ollama**
+
+    ---
+
+    Run LLMs on a GPU with one command, inside your own job.
+
+    [:octicons-arrow-right-24: Read more](software/ollama.md)
+
+-   :material-cube-outline:{ .lg .middle } **Apptainer**
+
+    ---
+
+    Run Docker/container images on the cluster without admin rights.
+
+    [:octicons-arrow-right-24: Read more](software/apptainer.md)
 
 </div>
 

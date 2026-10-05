@@ -15,7 +15,10 @@ nav = [
   { "Using SLURM" = [{ "Overview" = "using-slurm/index.md" }, { "Monitoring" = "using-slurm/monitoring.md" }, { "Submitting Jobs" = "using-slurm/submitting-jobs.md" }, { "Interactive Jobs" = "using-slurm/interactive-jobs.md" }, { "Transferring Data" = "using-slurm/transferring-data.md" }, { "Account Commands" = "using-slurm/account-commands.md" }] },
   { "Job Script Templates" = "job-script-templates.md" },
   { "Jupyter Access" = "jupyter-access.md" },
-  { "Model Zoo" = [{ "Overview" = "model-zoo.md" }, { "Usage Guide" = "usage-zoo.md" }] },
+  { "Storage" = "storage.md" },
+  { "FAQ" = "faq.md" },
+  { "Environment" = [{ "Overview" = "environment/index.md" }, { "Shell Settings" = "environment/shell-settings.md" }, { "Modules" = "environment/modules.md" }, { "Package Cache" = "environment/package-cache.md" }, { "Model Zoo" = [{ "Overview" = "model-zoo/index.md" }, { "Models" = "model-zoo/models.md" }, { "Usage Guide" = "model-zoo/usage.md" }] }] },
+  { "Software" = [{ "Overview" = "software/index.md" }, { "Ollama" = "software/ollama.md" }, { "Apptainer" = "software/apptainer.md" }] },
 ]
 
 extra_css = ["stylesheets/extra.css"]
@@ -81,10 +84,6 @@ toggle.name = "Switch to dark mode"
 scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
-
-[[project.extra.social]]
-icon = "fontawesome/brands/github"
-link = "https://github.com/KFUPM-JRCAI/slurm-users-guide"
 
 [project.markdown_extensions]
 abbr = {}

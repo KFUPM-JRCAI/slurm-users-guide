@@ -208,3 +208,35 @@
   inset: 0;
   border-radius: inherit;
 }
+
+/*
+ * Bigger text, no icon, for top-level "index" nav entries that have their
+ * own overview page: Home, and any top-level section with children (Using
+ * SLURM, Environment, Software today). The second selector is semantic
+ * (.md-nav__item--nested = "is a section"), not positional — it
+ * automatically covers any future top-level section too, as long as it has
+ * an overview page (i.e. a real href, excluding the toggle <label> which
+ * has none). Home has no children, so it's matched separately by being the
+ * first item — safe since "Home" is always first by convention.
+ */
+.md-nav--primary > .md-nav__list > .md-nav__item:first-child > .md-nav__link,
+.md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link.md-nav__container > a.md-nav__link[href] {
+  font-size: 0.8rem;
+}
+
+.md-nav--primary > .md-nav__list > .md-nav__item:first-child > .md-nav__link svg,
+.md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link.md-nav__container > a.md-nav__link[href] svg {
+  display: none;
+}
+
+.md-nav--primary > .md-nav__list > .md-nav__item:first-child > .md-nav__link {
+  font-weight: 700;
+}
+
+/* Hide the bottom footer-meta bar entirely: it only ever held the "Made
+   with Zensical" attribution and a GitHub icon that duplicates the repo
+   link already in the header. The page next/prev navigation above it is
+   untouched. */
+.md-footer-meta {
+  display: none;
+}
